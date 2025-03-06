@@ -1,0 +1,22 @@
+/* GLOBAL CSS VARIABLES */
+:root {
+    --DARK-GREEN-COLOR: #006400;
+    --GOLD: #FFD700;
+    
+    /* Initial Padding */
+    --PADDING: 0 6em;
+    --ALTERNATIVE-PADDING: 0 1em;
+
+    /* Initial Border */
+    --BORDER: 1px solid #000;
+}
+
+@media screen and (max-width: 920px) {
+    .hero-section, #main {
+        padding: var(--ALTERNATIVE-PADDING);
+    }
+
+    .hero-paragraph {
+        margin: 1em 0 2em 0;
+    }
+}

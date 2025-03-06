@@ -1,0 +1,425 @@
+/* Global font family */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL CSS VARIABLES */
+:root {
+    --DARK-GREEN-COLOR: #006400;
+    --GOLD: #FFD700;
+    
+    /* Initial Padding */
+    --PADDING: 0 6em;
+    --ALTERNATIVE-PADDING: 0 1em;
+
+    /* Initial Border */
+    --BORDER: 1px solid #000;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    /* background-color: ; */
+}
+
+.hero-section {
+    background-image:
+        linear-gradient(90deg, #000000, #00000071),
+        url(../assets/coding-background.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: var(--PADDING);
+}
+
+/* About, and Membership Page Styling */
+.hero-section.membership, .hero-section.about  {
+    height: 55vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4em;
+    padding-top: 2em;
+}
+
+.fixed-header {
+    position: fixed; /* Keeps it at the top */
+    top: 0.5em;
+    left: 50%; /* Centers the element */
+    transform: translateX(-50%); /* Ensures it's fully centered */
+    width: calc(100% - 40px); /* Makes sure it doesn't overflow */
+    max-width: 1400px; /* Optional: prevent it from being too wide */
+    z-index: 1000;
+    background-color: #00000083;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+}
+
+a {
+    text-decoration: none;
+}
+
+menu {
+    display: flex;
+    gap: 3.5em;
+}
+
+li {
+    list-style-type: none;
+}
+
+li > a {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.05em;
+}
+
+/* Base link underline */
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.8px;
+    background-color: var(--DARK-GREEN-COLOR);
+    margin-top: 4px;
+    border-radius: 1em;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.link:hover::after {
+    width: 100%;
+}
+
+/* Active link effect */
+.link.active::after {
+    width: 100%; /* Keep underline when active */
+}
+
+.hero-contents-container {
+    max-width: 800px; 
+}
+
+.hero-contents-container.about, .hero-contents-container.membership {
+    max-width: 1150px; 
+}
+
+@keyframes slideText {
+    0% { opacity: 0; transform: translateY(20px); }
+    50% { opacity: 1; transform: translateY(0px); }
+}
+
+#hero-heading {
+    color: #fff;
+    font-size: 3em;
+    height: 250px;
+    overflow: hidden; 
+}
+
+.hero-heading-route {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 0.3em;
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% { 
+        /* opacity: 0;  */
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% { 
+        /* opacity: 1;  */
+        transform: translateY(0); 
+    }
+}
+
+.highlight {
+    width: 215.95px;
+}
+
+.highlight::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(0, 100, 0, 0.521);
+    margin-top: -0.4em;
+}
+
+.highlightTwo::before {
+    content: 'Membership';
+    background-color: rgba(0, 100, 0, 0.521);
+}
+
+.hero-paragraph {
+    color: #fff;
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin: 0 0 2em 0;
+}
+
+#button-container {
+    display: flex;
+    gap: 1.5em;
+}
+
+.btn {
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    /* padding: 1.15em 3.5em; */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+.primary {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border: 1.5px solid var(--DARK-GREEN-COLOR);
+    color: var(--DARK-GREEN-COLOR);
+    transition: all 0.45s ease;
+    padding: 1.15em 3.5em;
+}
+
+.primary:hover {
+    background-color: #00640056;
+    color: #000000d0;
+    color: var(--GOLD);
+    backdrop-filter: none;
+}
+
+.read-more {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border: 1.5px solid var(--DARK-GREEN-COLOR);
+    color: var(--DARK-GREEN-COLOR);
+    transition: all 0.45s ease;
+    padding: 1em 1.8em;
+}
+
+.read-more:hover {
+    background-color: #00640056;
+    color: #000000d0;
+    color: var(--GOLD);
+    backdrop-filter: none;
+}
+
+.secondary {
+    background-color: var(--DARK-GREEN-COLOR);
+    color: var(--GOLD);
+    transition: all 0.45s ease;
+    padding: 1.15em 3.5em;
+}
+
+.secondary:hover {
+    background: transparent;
+    background-color: #0064009e;
+    color: #ffd9007a;
+}
+
+#main {
+    padding: var(--PADDING);
+    margin-top: 3em;
+}
+
+.mainIntro {
+    line-height: 1.9;
+    font-size: 1.15em;
+    color: #2f2f2f;
+}
+
+.objectives {
+    margin: 3em auto;
+    /* border: 1px solid; */
+    width: 700px;
+    line-height: 1.6;
+}
+
+.core-objecives {
+    font-weight: 900;
+}
+
+.objectives-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Adds space between the spans */
+    /* margin-top: 2rem; */
+}
+
+.objectives-feature {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333; /* Adjust the color as needed */
+    border-left: 10px solid #ffd700;
+    padding-left: 1em;
+}
+
+:is(#about-button-container, #membership-button-container) {
+    margin-top: 1em;
+}
+
+.next-level-container {
+    background-image:
+        linear-gradient(90deg, rgba(0, 53, 0, 0.91), rgba(0, 53, 0, 0.91)),
+        url(../assets/next-level.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    padding: var(--PADDING);
+    margin: 4em 0 0 calc(-50vw + 50%);
+    width: 100vw;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+}
+
+.next-level-container > h2 {
+    font-size: 3em;
+}
+
+.next-level-container > p {
+    font-size: 1.25em;
+}
+
+.join-now {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border: 1.5px solid var(--GOLD);
+    color: var(--GOLD);
+    transition: all 0.45s ease;
+    padding: 1.15em 3.5em;
+    border-radius: 0.6em;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+footer {
+    background-color: #161616;
+    color: #fff;
+    padding: 6em 4em 0;
+    margin-top: 6em;
+}
+
+.topFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.logo {
+    width: 150px;
+    height: 76px;
+}
+
+.full-address-con {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+address > p {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    line-height: 2.25;
+    /* margin-bottom: 0.5em; */
+}
+
+.social-links-con {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.social-links-con > span > img {
+    background-color: #fff; 
+    padding: 6px; 
+    border-radius: 50px;
+    width: 30px;
+}
+
+.input-field-con {
+    position: relative;
+    border-radius: 1em;
+    margin: 0.8em 0;
+    width: 350px;
+}
+
+.input-field-con > input {
+    height: 50px;
+    width: 100%;
+    border-radius: 1em;
+    padding: 0 5.25em 0 1em;
+    border: none;
+    font-size: 0.96em;
+}
+
+.input-field-con > button {
+    position: absolute;
+    right: 0.8em;
+    top: 0.3em;
+    bottom: 0.3em;
+    border: none;
+    outline: none;
+    border-radius: 1em;
+    background-color: var(--DARK-GREEN-COLOR);
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border: 0.1px solid #474747;
+}
+
+.bottomFooter {
+    padding: 1.1em;
+    text-align: center;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    right: 0.5em;
+    bottom: 3em;
+    background-color: var(--DARK-GREEN-COLOR);
+    border: none;
+    padding: 0.8em;
+    margin-top: 18em;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #006400f4;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
