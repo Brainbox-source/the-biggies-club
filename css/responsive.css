@@ -5,18 +5,198 @@
     
     /* Initial Padding */
     --PADDING: 0 6em;
-    --ALTERNATIVE-PADDING: 0 1em;
+    --ALTERNATIVE-PADDING: 0 2em;
+    --ALTERNATIVE-MOBILE-PADDING: 0 1em;
 
     /* Initial Border */
     --BORDER: 1px solid #000;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 320px) {
+    .fixed-header {
+        display: none;
+    }
+
     .hero-section, #main {
-        padding: var(--ALTERNATIVE-PADDING);
+        padding: var(--ALTERNATIVE-MOBILE-PADDING);
+    }
+
+    .hero-section {
+        height: 160vh;
+        /* overflow: auto; */
+    }
+
+    /* About, and Membership Page Styling */
+    .hero-section.membership, .hero-section.about  {
+        height: 50vh;
     }
 
     .hero-paragraph {
         margin: 1em 0 2em 0;
+    }
+
+    .objective, .about-section, .membership-section-con {
+        flex-direction: column;
+    }
+
+    .membership-con {
+        flex-direction: column-reverse;
+    }
+
+    .topFooter {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .suscribe-con {
+        margin-top: 3em;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 576px) {
+    .fixed-header {
+        display: none;
+    }
+
+    #hero-heading {
+        font-size: 1.8em;
+        height: 170px;
+    }
+
+    .hero-paragraph {
+        font-size: 1em;
+    }
+
+    .hero-section, #main {
+        padding: var(--ALTERNATIVE-MOBILE-PADDING);
+    }
+
+    .hero-section {
+        height: 95vh;
+        /* overflow: auto; */
+    }
+
+    /* About, and Membership Page Styling */
+    .hero-section.membership, .hero-section.about  {
+        height: 50vh;
+    }
+
+    .hero-paragraph {
+        margin: 1em 0 2em 0;
+    }
+
+    .primary {
+        background: transparent;
+        backdrop-filter: blur(5px);
+        border: 1.5px solid var(--DARK-GREEN-COLOR);
+        color: var(--DARK-GREEN-COLOR);
+        transition: all 0.45s ease;
+        padding: 1em 2em;
+    }
+    
+    .secondary {
+        background-color: var(--DARK-GREEN-COLOR);
+        color: var(--GOLD);
+        transition: all 0.45s ease;
+        padding: 1em 2em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    menu {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 8em;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.979);
+        padding: 1em 0;
+        gap: 1.5em;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    menu.active {
+        display: flex; /* Show when active */
+    }
+
+    li {
+        padding: 0.5em 0;
+    }
+
+    /* Base link underline */
+    .link::after {
+        display: none;
+    }
+
+    .objective, .about-section, .membership-section-con {
+        flex-direction: column;
+    }
+
+    .membership-con {
+        flex-direction: column-reverse;
+    }
+
+    .img {
+        border-radius: 15px;
+        width: 350px; 
+        height: 250px;
+    }
+
+    footer {
+        padding: 6em 1em 0;
+    }
+
+    .full-address-con {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topFooter {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .suscribe-con {
+        margin-top: 3em;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 920px) {
+    .hero-section, #main {
+        padding: var(--ALTERNATIVE-PADDING);
+    }
+
+    .hero-section {
+        height: 75vh;
+    }
+
+    /* About, and Membership Page Styling */
+    .hero-section.membership, .hero-section.about  {
+        height: 50vh;
+    }
+
+    .hero-paragraph {
+        margin: 1em 0 2em 0;
+    }
+
+    .objective, .about-section, .membership-section-con {
+        flex-direction: column;
+    }
+
+    .membership-con {
+        flex-direction: column-reverse;
+    }
+
+    .topFooter {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .suscribe-con {
+        margin-top: 3em;
     }
 }

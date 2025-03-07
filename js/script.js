@@ -9,3 +9,4 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Single Page App
 singlePageApp();
+

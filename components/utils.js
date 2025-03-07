@@ -18,7 +18,7 @@ export const singlePageApp = () => {
           <div>
             <div class="objective" style="margin: 4em 0; display: flex; align-items: center; gap: 2em;">
                 <div>
-                    <img src="assets/membership.webp" style="border-radius: 50px; width: 600px; height: 350px;">
+                    <img src="assets/membership.webp" class="img">
                 </div>
 
                 <div>
@@ -38,7 +38,7 @@ export const singlePageApp = () => {
                 </div>
             </div>
 
-            <div class="objective" style="margin: 4em 0; display: flex; align-items: center; gap: 2em;">
+            <div class="objective membership-con" style="margin: 4em 0; display: flex; align-items: center; gap: 2em;" class="img">
                 <div>
                     <div class="obj-con" style="display: flex; margin-bottom: 1.5em; align-items: center; justify-content: center; gap: 1em;">
                         <p style="border-top: 1.5px solid gold; width: 26%"></p>
@@ -56,7 +56,7 @@ export const singlePageApp = () => {
                 </div>
 
                 <div>
-                    <img src="assets/about-us.jpg" style="border-radius: 50px; width: 600px; height: 350px;">
+                    <img src="assets/about-us.jpg" class="img">
                 </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export const singlePageApp = () => {
             <div>
                 <p class="mainIntro">The Biggies Club (TBC) is a professional network designed to bring together ambitious, thriving professionals with a shared goal of achieving exceptional growth and success, rooted in a billionaire mindset. TBC’s platform allows members to collaborate, exchange ideas, and propel one another toward remarkable achievements while making lasting social impact.</p>
         
-                <div style="display: flex; align-items: center; gap: 1em;">
+                <div class="about-section" style="display: flex; align-items: center; gap: 1em;">
                     <div>
                         <img src="assets/core-objectives-removebg-preview.png" style="border-radius: 50px; width: 600px; height: 400px;">
                     </div>
@@ -93,7 +93,7 @@ export const singlePageApp = () => {
                     </div>
                 </div>
 
-                <div style="display: flex; align-items: center; flex-direction: row-reverse; gap: 1em; margin-top: 3em;">
+                <div class="about-section" style="display: flex; align-items: center; gap: 1em; margin-top: 3em;">
                     <div>
                         <img src="assets/code-of-conduct.avif" style="border-radius: 50px; width: 600px; height: 400px;">
                     </div>
@@ -125,7 +125,7 @@ export const singlePageApp = () => {
                     </div>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 3em; margin-top: 3em;">
+                <div class="about-section" style="display: flex; align-items: center; gap: 3em; margin-top: 3em;">
                     <div>
                         <img src="assets/core-values.avif" style="border-radius: 50px; width: 600px; height: 400px;">
                     </div>
@@ -139,19 +139,19 @@ export const singlePageApp = () => {
 
                         <div class="objectives-container">
                             <span class="objectives-feature">
-                                Ambition
+                                Ambition – Striving for innovation and pushing coding limits.
                             </span>
 
                             <span class="objectives-feature">
-                                Excellence
+                                Excellence – Writing clean, top-quality code.
                             </span>
 
                             <span class="objectives-feature">
-                                Integrity
+                                Integrity – Ethical coding and a supportive community.
                             </span>
 
                             <span class="objectives-feature">
-                                Impact
+                                Impact – Building solutions that matter.
                             </span>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ export const singlePageApp = () => {
             <div>
                 <p class="mainIntro">At The Biggies Club (TBC), we bring together thriving professionals who share a billionaire’s mindset, a drive for exceptional success, and a passion for creating impact. As a member, you gain access to an exclusive network of elite professionals, business leaders, and innovators dedicated to shaping the future.</p>
 
-                <div style="display: flex; align-items: center; gap: 1em; flex-direction: row-reverse;">
+                <div class="membership-section-con" style="display: flex; align-items: center; gap: 1em;">
                     <div>
                         <img src="assets/why-join.avif" style="border-radius: 50px; width: 600px; height: 400px;">
                     </div>
@@ -202,7 +202,7 @@ export const singlePageApp = () => {
                     </div>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 1em; margin-top: 1.5em;">
+                <div class="membership-section-con" style="display: flex; align-items: center; gap: 1em; margin-top: 1.5em;">
                     <div>
                         <img src="assets/about-us.jpg" style="border-radius: 50px; width: 600px; height: 400px;">
                     </div>
@@ -234,7 +234,7 @@ export const singlePageApp = () => {
                     </div>
                 </div>
 
-                <div style="display: flex; align-items: center; flex-direction: row-reverse; gap: 1em; margin-top: 3em;">
+                <div class="membership-section-con" style="display: flex; align-items: center; gap: 1em; margin-top: 3em;">
                     <div>
                         <img src="assets/how-to-join.avif" style="border-radius: 50px; width: 600px; height: 400px;">
                     </div>
@@ -296,7 +296,7 @@ export const singlePageApp = () => {
     function render() {
         const path = window.location.hash || ''; // Default to home
         const heroSection = document.querySelector('.hero-section'); // Grab hero section
-        const heroContents = document.querySelector('.hero-contents-container')
+        const heroContents = document.querySelector('.hero-contents-container');
     
         // Remove any previous page-specific classes
         heroSection.classList.remove('about', 'membership');
@@ -476,5 +476,30 @@ export const singlePageApp = () => {
 
         // Event listener for scrolling
         window.addEventListener('scroll', toggleHeaderFixed);
+    };
+    
+    const hamburger = document.querySelector(".hamburger");
+const menu = document.querySelector("menu");
+
+hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+
+    // Toggle between hamburger (☰) and close (✖) icon
+    if (menu.classList.contains("active")) {
+        hamburger.innerHTML = "&times;"; // ✖
+    } else {
+        hamburger.innerHTML = "&#9776;"; // ☰
     }
-}
+});
+
+// Close menu when clicking outside
+document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+        menu.classList.remove("active");
+        hamburger.innerHTML = "&#9776;"; // Reset to ☰
+    }
+});
+
+    
+};
+
