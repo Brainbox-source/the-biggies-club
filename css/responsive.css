@@ -59,12 +59,16 @@
     }
 
     #hero-heading {
+        font-size: 2.25em;
+        height: 220px;
+    }
+
+    .hero-heading-route {
         font-size: 1.8em;
-        height: 170px;
     }
 
     .hero-paragraph {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .hero-section, #main {
@@ -72,13 +76,13 @@
     }
 
     .hero-section {
-        height: 95vh;
-        /* overflow: auto; */
+        height: 100vh;
+        overflow: auto;
     }
 
     /* About, and Membership Page Styling */
     .hero-section.membership, .hero-section.about  {
-        height: 50vh;
+        height: 60vh;
     }
 
     .hero-paragraph {
@@ -140,10 +144,27 @@
         flex-direction: column-reverse;
     }
 
+    .objectives {
+        width: 100%;
+        text-align: center;
+    }
+
     .img {
         border-radius: 15px;
-        width: 350px; 
+        width: 335px; 
         height: 250px;
+    }
+
+    .next-level-container {
+        padding: var(--ALTERNATIVE-MOBILE-PADDING);
+    }
+
+    .next-level-container > h2 {
+        font-size: 2em;
+    }
+    
+    .next-level-container > p {
+        font-size: 1em;
     }
 
     footer {
@@ -155,6 +176,10 @@
         align-items: flex-start;
     }
 
+    address > p {
+        font-size: 0.9em;
+    }
+
     .topFooter {
         align-items: flex-start;
         flex-direction: column;
@@ -162,6 +187,10 @@
 
     .suscribe-con {
         margin-top: 3em;
+    }
+
+    .input-field-con {
+        width: 320px;
     }
 }
 

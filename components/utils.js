@@ -67,7 +67,7 @@ export const singlePageApp = () => {
         
                 <div class="about-section" style="display: flex; align-items: center; gap: 1em;">
                     <div>
-                        <img src="assets/core-objectives-removebg-preview.png" style="border-radius: 50px; width: 600px; height: 400px;">
+                        <img src="assets/core-objectives-removebg-preview.png" class="img">
                     </div>
 
                     <div class="objectives">
@@ -95,7 +95,7 @@ export const singlePageApp = () => {
 
                 <div class="about-section" style="display: flex; align-items: center; gap: 1em; margin-top: 3em;">
                     <div>
-                        <img src="assets/code-of-conduct.avif" style="border-radius: 50px; width: 600px; height: 400px;">
+                        <img src="assets/code-of-conduct.avif" class="img">
                     </div>
 
                     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -127,7 +127,7 @@ export const singlePageApp = () => {
 
                 <div class="about-section" style="display: flex; align-items: center; gap: 3em; margin-top: 3em;">
                     <div>
-                        <img src="assets/core-values.avif" style="border-radius: 50px; width: 600px; height: 400px;">
+                        <img src="assets/core-values.avif" class="img">
                     </div>
 
                     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -164,7 +164,7 @@ export const singlePageApp = () => {
 
                 <div class="membership-section-con" style="display: flex; align-items: center; gap: 1em;">
                     <div>
-                        <img src="assets/why-join.avif" style="border-radius: 50px; width: 600px; height: 400px;">
+                        <img src="assets/why-join.avif" class="img">
                     </div>
 
                     <div class="objectives">
@@ -204,7 +204,7 @@ export const singlePageApp = () => {
 
                 <div class="membership-section-con" style="display: flex; align-items: center; gap: 1em; margin-top: 1.5em;">
                     <div>
-                        <img src="assets/about-us.jpg" style="border-radius: 50px; width: 600px; height: 400px;">
+                        <img src="assets/about-us.jpg" class="img">
                     </div>
 
                     <div class="objectives">
@@ -236,7 +236,7 @@ export const singlePageApp = () => {
 
                 <div class="membership-section-con" style="display: flex; align-items: center; gap: 1em; margin-top: 3em;">
                     <div>
-                        <img src="assets/how-to-join.avif" style="border-radius: 50px; width: 600px; height: 400px;">
+                        <img src="assets/how-to-join.avif" class="img">
                     </div>
 
                     <div class="objectives">

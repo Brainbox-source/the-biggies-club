@@ -86,7 +86,7 @@ li > a {
 /* Hamburger Icon */
 .hamburger {
     display: none;
-    font-size: 2.5em;
+    font-size: 2em;
     cursor: pointer;
     color: #fff;
 }
