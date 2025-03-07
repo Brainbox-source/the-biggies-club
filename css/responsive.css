@@ -200,12 +200,13 @@
     }
 
     .hero-section {
-        height: 75vh;
+        height: 100vh;
+        overflow: auto;
     }
 
     /* About, and Membership Page Styling */
     .hero-section.membership, .hero-section.about  {
-        height: 50vh;
+        height: 60vh;
     }
 
     .hero-paragraph {
