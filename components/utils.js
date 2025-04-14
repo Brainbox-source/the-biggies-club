@@ -275,7 +275,7 @@ export const singlePageApp = () => {
                         Submit your application and start your journey with TBC!
                     </p>
 
-                    <a href="" class="join-now">Join Now</a>
+                    <a href="https://rebrand.ly/tbcmembership" class="join-now">Join Now</a>
                 </div>
             </div>
         `
