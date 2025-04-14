@@ -1,6 +1,6 @@
-# 🚀 The Biggies Club - A Simple Coding Club Single Page Application
+# 🚀 The Biggies Club – A Dynamic Single Page Platform for Visionary Professionals
 
-A single-page application (SPA) that provides coding resources, tutorials, and interactive coding challenges to help developers learn and practice coding.
+A single-page application (SPA) designed to empower ambitious professionals with growth-focused content, collaborative tools, and resources that sharpen problem-solving, innovation, and tech fluency—all rooted in a billionaire mindset.
 
 ## 🌐 Live Demo
 [Visit The Biggies Club](https://the-biggies-club.vercel.app/)
